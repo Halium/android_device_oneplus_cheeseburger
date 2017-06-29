@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2017 The Linux Foundation
-# Copyright (C) 2017 The halogenOS Project
+# Copyright (C) 2017 The Halium Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -65,7 +65,6 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
@@ -99,12 +98,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
-#ANT+ stack
-PRODUCT_PACKAGES += \
-    AntHalService \
-    libantradio \
-    antradio_app \
-    libvolumelistener
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
@@ -117,19 +110,9 @@ PRODUCT_COPY_FILES += \
 	$(foreach _,$(shell find $(PLATFORM_PATH)/wifi -type f),\
 		$_:$(subst $(realpath PLATFORM_PATH)/wifi,sytem/etc/wifi,$_))
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/fpc1020.kl:system/usr/keylayout/fpc1020.kl \
-    $(LOCAL_PATH)/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
-
 #for android_filesystem_config.h
 PRODUCT_PACKAGES += \
     fs_config_files
-
-#A/B related packages
-PRODUCT_PACKAGES += \
-            bootctrl.msm8998 \
-            brillo_update_payload
 
 #FEATURE_OPENGLES_EXTENSION_PACK support string config file
 PRODUCT_COPY_FILES += \
@@ -181,5 +164,3 @@ PRODUCT_PACKAGES += \
     memtrack.msm8998 \
     power.msm8998 \
     vr.msm8998
-
-$(call inherit-product, device/oppo/common/common.mk)

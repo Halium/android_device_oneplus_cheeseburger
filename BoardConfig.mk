@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2017 The Linux Foundation
-# Copyright (C) 2017 The halogenOS Project
+# Copyright (C) 2017 The Halium Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-# Inherit from OPPO common
--include device/oppo/common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := OnePlus5,cheeseburger,oneplus5,op5,A5000,ONEPLUS A5000
 
@@ -199,9 +196,6 @@ USE_SENSOR_MULTI_HAL := true
 # Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
-
-# Charger
-#BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 # NFC
 TARGET_USES_NQ_NFC := true
