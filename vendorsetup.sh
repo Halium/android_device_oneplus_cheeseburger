@@ -1,2 +1,2 @@
-add_lunch_combo XOS_cheeseburger-userdebug
-add_lunch_combo XOS_cheeseburger-eng
+add_lunch_combo halium_cheeseburger-userdebug
+add_lunch_combo halium_cheeseburger-eng
