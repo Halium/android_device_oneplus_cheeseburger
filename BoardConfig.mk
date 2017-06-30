@@ -1,6 +1,6 @@
 #
 # Copyright (C) 2017 The Linux Foundation
-# Copyright (C) 2017 The Halium Project
+# Copyright (C) 2017 The halogenOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
